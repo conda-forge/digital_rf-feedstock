@@ -1,4 +1,4 @@
-{% set version = "2.6.3" %}
+{% set version = "2.6.4" %}
 
 package:
   name: digital_rf
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
-  sha256: 81624b4cffe727e0ef47369dd2b9b5993b3bfc0f3ce74f34c3f9dcea3a3650d6
+  sha256: 5d259ebb8915d725071166462cc5cd44cd69d22fa032170d76a8b33db9b31134
 
 build:
-  number: 1
+  number: 0
   # there are dependency conflicts for Python 2 on Windows
-  skip: True  # [win and py2k]
+  skip: true  # [win and py2k]
   run_exports:
     - {{ pin_subpackage('digital_rf') }}
 
@@ -61,7 +61,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Work with data in the Digital RF and Digital Metadata formats.'
+  summary: Work with data in the Digital RF and Digital Metadata formats.
   description: |
     The Digital RF project encompasses a standardized HDF5 format for reading
     and writing of radio frequency data and the software for doing so. The
