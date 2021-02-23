@@ -9,7 +9,7 @@ source:
   sha256: 34c002779a9d8ad94d1720142e74da9795396727b700a2a2db78e2194a34f719
 
 build:
-  number: 0
+  number: 1
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
@@ -38,7 +38,7 @@ requirements:
     - python-dateutil
     - pytz
     - six
-    - watchdog
+    - watchdog <1.0.0
 
 test:
   requires:
