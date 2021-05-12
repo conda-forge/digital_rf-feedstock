@@ -9,6 +9,8 @@ cmake ${CMAKE_ARGS} \
     -DPython_FIND_STRATEGY=LOCATION \
     ..
 cmake --build .
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 cmake --build . --target test
 rm -r /tmp/hdf5
+fi
 cmake --build . --target install
