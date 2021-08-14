@@ -42,7 +42,7 @@ requirements:
     - python-dateutil
     - pytz
     - six
-    - watchdog <1.0.0
+    - watchdog
 
 test:
   requires:
