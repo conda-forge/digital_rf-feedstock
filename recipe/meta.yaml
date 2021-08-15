@@ -1,4 +1,4 @@
-{% set version = "2.6.6" %}
+{% set version = "2.6.7" %}
 
 package:
   name: digital_rf
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
-  sha256: 34c002779a9d8ad94d1720142e74da9795396727b700a2a2db78e2194a34f719
+  sha256: 3dfe5c02463da57a2cfe33f0d836daec260d460d64a0a0de7fb461f71bf1b033
 
 build:
-  number: 1
+  number: 0
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
@@ -42,7 +42,7 @@ requirements:
     - python-dateutil
     - pytz
     - six
-    - watchdog <1.0.0
+    - watchdog
 
 test:
   requires:
