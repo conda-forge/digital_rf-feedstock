@@ -2,7 +2,7 @@
 
 # fix linking when cross-compiling with distutils by manually specifying LDSHARED
 # to use the same compiler as $CC
-LDSHARED="$CC `python -c "import sysconfig; print(sysconfig.get_config_var('LDSHARED').split(maxsplit=1)[1])"`"
+export LDSHARED="$CC `python -c "import sysconfig; print(sysconfig.get_config_var('LDSHARED').split(maxsplit=1)[1])"`"
 
 mkdir build
 cd build
