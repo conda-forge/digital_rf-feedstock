@@ -13,9 +13,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-aarch64
+- quay.io/condaforge/linux-anvil-comp7
 gnuradio_core:
-- 3.9.3
+- 3.9.4
 hdf5:
 - 1.12.1
 numpy:

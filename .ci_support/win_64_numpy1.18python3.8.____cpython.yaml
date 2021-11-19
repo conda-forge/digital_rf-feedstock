@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gnuradio_core:
-- 3.9.3
+- 3.9.4
 hdf5:
 - 1.12.1
 numpy:
