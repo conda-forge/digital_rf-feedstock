@@ -37,6 +37,9 @@ requirements:
     - h5py
     - hdf5
     - {{ pin_compatible('numpy') }}
+    # numpy 1.22 changes longdouble handling, errors on Windows
+    # Remove this constraint when digital_rf is updated
+    - numpy <1.22  # [win]
     - packaging
     - python
     - python-dateutil
