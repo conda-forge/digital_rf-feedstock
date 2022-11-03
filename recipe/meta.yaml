@@ -11,7 +11,7 @@ source:
     - 0001-python-Fix-_get_file_list-for-compat-with-numpy-1.23.patch
 
 build:
-  number: 3
+  number: 4
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
