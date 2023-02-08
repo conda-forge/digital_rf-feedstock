@@ -9,7 +9,7 @@ source:
   sha256: 62fd998abbdffcf406524d66a54385cede270349af695b0b0e9e24c0488ac5a0
 
 build:
-  number: 0
+  number: 1
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
