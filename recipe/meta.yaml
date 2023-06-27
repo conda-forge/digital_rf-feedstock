@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
   sha256: 62fd998abbdffcf406524d66a54385cede270349af695b0b0e9e24c0488ac5a0
+  patches:
+    - 0001-python-Replace-example-s-deprecated-use-of-np.comple.patch
 
 build:
-  number: 0
+  number: 1
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
