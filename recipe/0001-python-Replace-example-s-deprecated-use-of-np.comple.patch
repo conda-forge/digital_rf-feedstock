@@ -1,0 +1,32 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryan Volz <rvolz@mit.edu>
+Date: Fri, 24 Mar 2023 18:40:23 -0400
+Subject: [PATCH] python: Replace example's deprecated use of `np.complex`
+
+---
+ python/examples/example_write_digital_metadata.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/python/examples/example_write_digital_metadata.py b/python/examples/example_write_digital_metadata.py
+index b1650c6..661b7d0 100644
+--- a/python/examples/example_write_digital_metadata.py
++++ b/python/examples/example_write_digital_metadata.py
+@@ -64,13 +64,13 @@ data_dict["single_int"] = np.int32(single_int)
+ single_float = 6.0
+ data_dict["single_float"] = np.float64(single_float)
+ single_complex = 7.0 + 8.0j
+-data_dict["single_complex"] = np.complex(single_complex)
++data_dict["single_complex"] = np.complex64(single_complex)
+ 
+ # now create subdirectories
+ sub_dict = {}
+ sub_dict["single_int"] = np.int32(single_int)
+ sub_dict["single_float"] = np.float64(single_float)
+-sub_dict["single_complex"] = np.complex(single_complex)
++sub_dict["single_complex"] = np.complex64(single_complex)
+ level2_dict = {}  # embed yey another level
+ level2_dict["single_float"] = np.float64(single_float)
+ sub_dict["level2"] = level2_dict
+-- 
+2.40.0
+
