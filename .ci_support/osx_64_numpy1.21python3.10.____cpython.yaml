@@ -3,15 +3,15 @@ MACOSX_DEPLOYMENT_TARGET:
 c_compiler:
 - clang
 c_compiler_version:
-- '14'
+- '15'
 channel_sources:
 - conda-forge
 channel_targets:
 - conda-forge main
 gnuradio_core:
-- 3.10.4
+- 3.10.6
 hdf5:
-- 1.12.2
+- 1.14.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
