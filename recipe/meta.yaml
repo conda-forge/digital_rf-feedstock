@@ -11,7 +11,7 @@ source:
     - 0001-python-Replace-example-s-deprecated-use-of-np.comple.patch
 
 build:
-  number: 1
+  number: 2
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
