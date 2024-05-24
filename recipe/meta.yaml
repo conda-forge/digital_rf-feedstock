@@ -1,4 +1,4 @@
-{% set version = "2.6.8" %}
+{% set version = "2.6.9" %}
 
 package:
   name: digital_rf
@@ -6,12 +6,10 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
-  sha256: 62fd998abbdffcf406524d66a54385cede270349af695b0b0e9e24c0488ac5a0
-  patches:
-    - 0001-python-Replace-example-s-deprecated-use-of-np.comple.patch
+  sha256: f2300ec838f3b60081e719123e60dbeced4580826756e7026c04a9112ddd7399
 
 build:
-  number: 2
+  number: 0
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
@@ -20,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - cmake >=3.15
     - make  # [not win]
     # cross-compilation dependencies
