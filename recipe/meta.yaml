@@ -9,6 +9,7 @@ source:
   sha256: f2300ec838f3b60081e719123e60dbeced4580826756e7026c04a9112ddd7399
   patches:
     - 0001-Fix-aliased-numpy-function-names-for-numpy-2.0-compa.patch
+    - 0002-Adapt-to-numpy-2.0-new-copy-keyword-convention.patch
 
 build:
   number: 1

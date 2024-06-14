@@ -1,0 +1,51 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Ryan Volz <rvolz@mit.edu>
+Date: Fri, 14 Jun 2024 16:12:18 -0400
+Subject: [PATCH] Adapt to numpy 2.0 new copy keyword convention
+
+In numpy 2.0, the copy keyword for np.array and np.asarray has changed
+meaning so that False does not allow any copies. This switches to using
+np.asarray instead of np.array as the preferred way to ensure an array
+and not copy unless necessary.
+---
+ python/digital_rf/digital_metadata.py | 2 +-
+ python/digital_rf/digital_rf_hdf5.py  | 3 ++-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/python/digital_rf/digital_metadata.py b/python/digital_rf/digital_metadata.py
+index 0205bd2..a45df05 100644
+--- a/python/digital_rf/digital_metadata.py
++++ b/python/digital_rf/digital_metadata.py
+@@ -253,7 +253,7 @@ class DigitalMetadataWriter(object):
+ 
+         """
+         try:
+-            samples = np.array(samples, dtype=np.uint64, copy=False, ndmin=1)
++            samples = np.atleast_1d(np.asarray(samples, dtype=np.uint64))
+         except (TypeError, ValueError):
+             raise ValueError("Values in `samples` must be convertible to uint64")
+ 
+diff --git a/python/digital_rf/digital_rf_hdf5.py b/python/digital_rf/digital_rf_hdf5.py
+index fa4e1a7..57f40e1 100644
+--- a/python/digital_rf/digital_rf_hdf5.py
++++ b/python/digital_rf/digital_rf_hdf5.py
+@@ -15,6 +15,7 @@ Reading/writing functionality is available from two classes: DigitalRFReader
+ and DigitalRFWriter.
+ 
+ """
++
+ from __future__ import absolute_import, division, print_function
+ 
+ import collections
+@@ -1421,7 +1422,7 @@ class DigitalRFReader(object):
+             return y
+         else:
+             out_dtype = np.promote_types("f4", z.dtype)
+-            return np.array(z, dtype=out_dtype, copy=False)
++            return np.asarray(z, dtype=out_dtype)
+ 
+     def read_vector_raw(
+         self, start_sample, vector_length, channel_name, sub_channel=None
+-- 
+2.45.1
+
