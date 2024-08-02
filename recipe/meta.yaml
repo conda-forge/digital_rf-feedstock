@@ -79,6 +79,13 @@ test:
     - if not exist %PREFIX%\\Library\\lib\\digital_rf.lib exit 1  # [win]
     - for /f "usebackq tokens=*" %%a in (`pkg-config --variable=libdir --dont-define-prefix digital_rf`) do if not exist "%%a/digital_rf.lib" exit 1  # [win]
 
+    # verify that CMake files get installed
+    {% set cms = ["Config", "ConfigVersion", "Targets-release", "Targets"] %}
+    {% for cm in cms %}
+    - test -f $PREFIX/lib/cmake/libdigital_rf/libdigital_rf{{ cm }}.cmake  # [unix]
+    - if not exist %PREFIX%\\Library\\lib\\cmake\\libdigital_rf\\libdigital_rf{{ cm }}.cmake  # [win]
+    {% endfor %}
+
     # verify that (some) GRC blocks get installed
     {% set blocks = ["digital_rf_channel_sink", "digital_rf_channel_source"] %}
     {% set blocks = blocks + ["digital_rf_sink", "digital_rf_source"] %}
