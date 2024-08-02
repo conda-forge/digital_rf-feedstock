@@ -13,7 +13,7 @@ source:
     - 0003-cmake-c-Clean-up-install-so-DLL-actually-installs-on.patch
 
 build:
-  number: 1
+  number: 2
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
