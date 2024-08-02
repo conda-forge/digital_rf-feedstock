@@ -10,6 +10,7 @@ source:
   patches:
     - 0001-Fix-aliased-numpy-function-names-for-numpy-2.0-compa.patch
     - 0002-Adapt-to-numpy-2.0-new-copy-keyword-convention.patch
+    - 0003-cmake-c-Clean-up-install-so-DLL-actually-installs-on.patch
 
 build:
   number: 1
