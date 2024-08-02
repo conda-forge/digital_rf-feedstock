@@ -5,11 +5,11 @@ Subject: [PATCH] cmake: c: Clean up install so DLL actually installs on
  Windows
 
 ---
- c/CMakeLists.txt | 12 ++----------
- 1 file changed, 2 insertions(+), 10 deletions(-)
+ c/CMakeLists.txt | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
 
 diff --git a/c/CMakeLists.txt b/c/CMakeLists.txt
-index bfd7ab2..c209035 100644
+index bfd7ab2..fea8192 100644
 --- a/c/CMakeLists.txt
 +++ b/c/CMakeLists.txt
 @@ -93,8 +93,6 @@ target_include_directories(digital_rf PUBLIC
@@ -21,23 +21,20 @@ index bfd7ab2..c209035 100644
      VERSION ${libdigital_rf_VERSION}
      SOVERSION ${libdigital_rf_VERSION_MAJOR}
      INTERFACE_libdigital_rf_MAJOR_VERSION ${libdigital_rf_VERSION_MAJOR}
-@@ -105,14 +103,8 @@ set_target_properties(digital_rf PROPERTIES
+@@ -105,10 +103,10 @@ set_target_properties(digital_rf PROPERTIES
      POSITION_INDEPENDENT_CODE ON
  )
  
 -install(TARGETS digital_rf EXPORT libdigital_rfTargets
 -    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 -    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
--)
--install(FILES
--    ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf.h
--    ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf_version.h
--    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/digital_rf
 +install(TARGETS digital_rf
 +    EXPORT libdigital_rfTargets
  )
- 
- # build/install pkgconfig configuration files
++
+ install(FILES
+     ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf.h
+     ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf_version.h
 -- 
 2.45.2
 
