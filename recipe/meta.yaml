@@ -90,7 +90,7 @@ test:
     {% set blocks = ["digital_rf_channel_sink", "digital_rf_channel_source"] %}
     {% set blocks = blocks + ["digital_rf_sink", "digital_rf_source"] %}
     {% for block in blocks %}
-    - test -f $PREFIX/share/gnuradio/grc/blocks/gr_digital_rf_{{ block }}.block.yml # [unix]
+    - test -f $PREFIX/share/gnuradio/grc/blocks/gr_digital_rf_{{ block }}.block.yml  # [unix]
     - if not exist %PREFIX%\\Library\\share\\gnuradio\\grc\\blocks\\gr_digital_rf_{{ block }}.block.yml  # [win]
     {% endfor %}
 
