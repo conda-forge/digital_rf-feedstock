@@ -36,5 +36,5 @@ index bfd7ab2..fea8192 100644
      ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf.h
      ${CMAKE_CURRENT_BINARY_DIR}/include/digital_rf_version.h
 -- 
-2.45.2
+2.46.0
 
