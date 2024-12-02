@@ -11,9 +11,10 @@ source:
     - 0001-Fix-aliased-numpy-function-names-for-numpy-2.0-compa.patch
     - 0002-Adapt-to-numpy-2.0-new-copy-keyword-convention.patch
     - 0003-cmake-c-Clean-up-install-so-DLL-actually-installs-on.patch
+    - 0004-Add-B-parameter-to-scale-integer-data-by-a-different.patch
 
 build:
-  number: 2
+  number: 3
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
