@@ -14,7 +14,7 @@ source:
     - 0004-Add-B-parameter-to-scale-integer-data-by-a-different.patch
 
 build:
-  number: 3
+  number: 4
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
