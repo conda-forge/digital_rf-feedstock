@@ -7,8 +7,10 @@ cmake_config_args=(
     -DCMAKE_BUILD_TYPE=Release
     -DCMAKE_INSTALL_PREFIX=$PREFIX
     -DCMAKE_INSTALL_LIBDIR=lib
-    -DDRF_INSTALL_PREFIX_PYTHON=$PREFIX
     -DPython_EXECUTABLE=$PYTHON
+    # Fix for finding Python when cross-compiling
+    -DPython_INCLUDE_DIR="$(python -c 'import sysconfig; print(sysconfig.get_path("include"))')"
+    -DPython_NumPy_INCLUDE_DIR="$(python -c 'import numpy;print(numpy.get_include())')"
 )
 
 cmake ${CMAKE_ARGS} -G "Ninja" .. "${cmake_config_args[@]}"
