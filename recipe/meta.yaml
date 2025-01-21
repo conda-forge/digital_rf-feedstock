@@ -7,11 +7,6 @@ package:
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
   sha256: 89f832ff4ad0119292071522bb64aadd7d5067e8c79b9fea87901ce94d63e3ff
-  patches:
-    - 0001-Fix-aliased-numpy-function-names-for-numpy-2.0-compa.patch
-    - 0002-Adapt-to-numpy-2.0-new-copy-keyword-convention.patch
-    - 0003-cmake-c-Clean-up-install-so-DLL-actually-installs-on.patch
-    - 0004-Add-B-parameter-to-scale-integer-data-by-a-different.patch
 
 build:
   number: 0
