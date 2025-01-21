@@ -14,6 +14,8 @@ build:
   skip: true  # [win and py2k]
   run_exports:
     - {{ pin_subpackage('digital_rf') }}
+  entry_points:
+    - drf = digital_rf.drf_command:main
 
 requirements:
   build:
