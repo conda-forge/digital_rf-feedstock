@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
-  sha256: d845e10da45834f1a0131f06b4ede4028536b35c5f27a9860be44c4f05bd3c99
+  sha256: c41f423c12001143da14f0d3f48b665a09e86cf6ec91a8510220c828a5ce925d
 
 build:
   number: 0
