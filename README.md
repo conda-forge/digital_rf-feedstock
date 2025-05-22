@@ -226,7 +226,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-digital_rf-green.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-digital__rf-green.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/digital_rf.svg)](https://anaconda.org/conda-forge/digital_rf) |
 
 Installing digital_rf
 =====================
