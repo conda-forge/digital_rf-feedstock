@@ -1,4 +1,4 @@
-{% set version = "2.6.12" %}
+{% set version = "2.6.13" %}
 
 package:
   name: digital_rf
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/MITHaystack/digital_rf/releases/download/{{ version }}/digital_rf-{{ version }}.tar.gz
-  sha256: c41f423c12001143da14f0d3f48b665a09e86cf6ec91a8510220c828a5ce925d
+  sha256: 48988b17b21bf3d2746b0e9d74250ab39b42fc84ec27a7f731ff093611de985d
 
 build:
-  number: 1
+  number: 0
   # there are dependency conflicts for Python 2 on Windows
   skip: true  # [win and py2k]
   run_exports:
